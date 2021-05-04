@@ -14,12 +14,12 @@ class App extends React.Component {
         <div>
           Select a language:
           <i
-            className="flag in"
-            onClick={() => this.onLanguageChange("hindi")}
-          />
-          <i
             className="flag us"
             onClick={() => this.onLanguageChange("english")}
+          />
+          <i
+            className="flag du"
+            onClick={() => this.onLanguageChange("dutch")}
           />
         </div>
         <UserCreate />
