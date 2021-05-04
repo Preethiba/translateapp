@@ -3,7 +3,7 @@ import UserCreate from "./UserCreate";
 import LanguageContext from "../context/LanguageContext";
 
 class App extends React.Component {
-  state = { language: "hindi" };
+  state = { language: "english" };
 
   onLanguageChange = language => {
     this.setState({ language });
