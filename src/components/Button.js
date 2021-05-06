@@ -9,7 +9,7 @@ class Button extends React.Component {
     return (
       <Button className={`ui button ${color}`}>
         <LanguageContext.Consumer>
-          {value => (value === "english" ? "Submit" : "Voorlegen")}{" "}
+          {({ language }) => (language === "english" ? "Submit" : "Voorlegen")}
           {/*  provided as child to consumer component and it is automatically invoked , value is the value present in context */}
         </LanguageContext.Consumer>
       </Button>
@@ -20,9 +20,7 @@ class Button extends React.Component {
     // const text = this.context === "english" ? "Submit" : "Voorlegen";
     return (
       <ColorContext.Consumer>
-        {color => {
-          this.renderButton;
-        }}
+        {color => this.renderButton(color)}
       </ColorContext.Consumer>
     );
   }
